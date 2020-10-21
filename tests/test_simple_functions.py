@@ -23,10 +23,10 @@ class TestSimpleFunctions(object):
         """Test our factorial function."""
         answer = factorial(number)
         assert answer == expected
-    
+
+
 class TestSin(object):
 
-    def test_sine(n):
-        my_sine=sin(0)
+    def test_sine(self, n):
+        my_sine = sin(0)
         assert np.isclose(my_sine, np.sin(0), atol=1e-12)
-    
