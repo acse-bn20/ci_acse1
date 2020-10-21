@@ -1,7 +1,6 @@
 import pytest
-
-from simple_functions import my_sum, factorial
-
+from simple_functions import my_sum, factorial, sin
+import numpy as np
 
 class TestSimpleFunctions(object):
     """Class to test our simple functions are working correctly."""
@@ -20,8 +19,14 @@ class TestSimpleFunctions(object):
         (3, 6),
         (1, 1)
     ])
-
     def test_factorial(self, number, expected):
         """Test our factorial function."""
         answer = factorial(number)
         assert answer == expected
+    
+class TestSin(object):
+
+    def test_sine(n):
+        my_sine=sin(0)
+        assert np.isclose(my_sine, np.sin(0), atol=1e-12)
+    
